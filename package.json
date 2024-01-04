@@ -4,12 +4,25 @@
   "description": "a tour app using express",
   "main": "index.js",
   "scripts": {
+    "dev:start": "nodemon server.js",
+    "prod:start": "NODE_ENV=production nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "express",
+    "rest-apis"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
