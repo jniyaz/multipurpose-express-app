@@ -1,14 +1,24 @@
 const express = require("express");
+const {
+  getTours,
+  getTour,
+  createTour,
+  updateTour,
+  deleteTour,
+  validateRequest
+} = require("../controllers/tourController");
 
 const router = express.Router();
 
-const getAllUsers = (req, res) => {
-  res.status(500).json({
-    status: "error",
-    message: "This route is not yet defined!",
-  });
-};
+router
+  .route("/")
+  .get(getTours)
+  .post(validateRequest, createTour);
 
-router.route("/").get(getAllUsers);
+router
+  .route("/:id")
+  .get(getTour)
+  .patch(updateTour)
+  .delete(deleteTour);
 
 module.exports = router;

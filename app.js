@@ -4,7 +4,7 @@ const tourRoutes = require("./routes/tourRoutes");
 
 const app = express();
 
-// 1. middleware
+// 1. MIDDLEWARES
 if (process.env.NODEENV === "development") {
   app.use(morgan("dev"));
 }
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static(`${__dirname}/public`));
 
 app.use((req, res, next) => {
-  console.log("Hello from middleware... 👋");
+  console.log("Hi from middleware... 👋");
   next();
 });
 
@@ -22,14 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// 2. routes
-
-// test
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-// tours
+// 2. ROUTES
 app.use("/api/v1/tours", tourRoutes);
 
 module.exports = app;
