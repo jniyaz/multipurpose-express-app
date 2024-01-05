@@ -1,12 +1,12 @@
-const fs = require("fs");
+const fs = require('fs');
 
 const tours = JSON.parse(fs.readFileSync(`${__dirname}/../data/tours.json`));
 
 exports.validateRequest = (req, res, next) => {
   if (!req.body.name || !req.body.price) {
     return res.status(400).json({
-      status: "fail",
-      message: "missing name or price",
+      status: 'fail',
+      message: 'missing name or price',
     });
   }
   next();
@@ -16,7 +16,7 @@ exports.validateRequest = (req, res, next) => {
 exports.getTours = (req, res) => {
   try {
     return res.status(200).json({
-      status: "success",
+      status: 'success',
       requestedAt: req.requestTime,
       total: tours.length,
       data: {
@@ -25,7 +25,7 @@ exports.getTours = (req, res) => {
     });
   } catch (error) {
     res.status(404).json({
-      status: "Fail",
+      status: 'Fail',
       message: error,
     });
   }
@@ -38,7 +38,7 @@ exports.getTour = (req, res) => {
     const tour = tours.find((item) => item.id === id);
 
     res.status(200).json({
-      status: "success",
+      status: 'success',
       requestedAt: req.requestTime,
       data: {
         tour,
@@ -46,7 +46,7 @@ exports.getTour = (req, res) => {
     });
   } catch (error) {
     res.status(404).json({
-      status: "Fail",
+      status: 'Fail',
       message: error,
     });
   }
@@ -64,22 +64,22 @@ exports.createTour = (req, res) => {
   tours.push(newTour);
   fs.writeFile(`${__dirname}/data/tours.json`, JSON.stringify(tours), (error) =>
     res.status(201).json({
-      status: "success",
+      status: 'success',
       requestedAt: req.requestTime,
       data: {
         tour: newTour,
       },
-    })
+    }),
   );
 };
 
 // UPDATE
 exports.updateTour = (req, res) => {
   res.status(200).json({
-    status: "success",
+    status: 'success',
     requestedAt: req.requestTime,
     data: {
-      tour: "Updated tour here...",
+      tour: 'Updated tour here...',
     },
   });
 };
@@ -87,7 +87,7 @@ exports.updateTour = (req, res) => {
 // DELETE
 exports.deleteTour = (req, res) => {
   res.status(204).json({
-    status: "success",
+    status: 'success',
     data: null,
   });
 };
