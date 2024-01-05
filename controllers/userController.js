@@ -1,3 +1,4 @@
+// GET USERS
 exports.getUsers = (req, res) => {
   res.status(500).json({
     status: 'error',
@@ -6,6 +7,7 @@ exports.getUsers = (req, res) => {
   });
 };
 
+// GET USER
 exports.getUser = (req, res) => {
   res.status(500).json({
     status: 'error',
@@ -14,6 +16,7 @@ exports.getUser = (req, res) => {
   });
 };
 
+// CREATE USER
 exports.createUser = (req, res) => {
   res.status(500).json({
     status: 'error',
@@ -22,6 +25,7 @@ exports.createUser = (req, res) => {
   });
 };
 
+// UPDATE USER
 exports.updateUser = (req, res) => {
   res.status(500).json({
     status: 'error',
@@ -30,6 +34,7 @@ exports.updateUser = (req, res) => {
   });
 };
 
+// DELETE USER
 exports.deleteUser = (req, res) => {
   res.status(500).json({
     status: 'error',
