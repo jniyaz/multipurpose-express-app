@@ -1,9 +1,8 @@
 const Tour = require('../models/tourModel');
 
-// Refer on used mock data
+// Refer - files based data
 // const fs = require('fs');
 // const tours = JSON.parse(fs.readFileSync(`${__dirname}/../data/tours.json`));
-
 // exports.validateRequest = (req, res, next) => {
 //   if (!req.body.name || !req.body.price) {
 //     return res.status(400).json({
