@@ -1,6 +1,6 @@
 const Tour = require('../models/tourModel');
 
-// refer on used mock data
+// Refer on used mock data
 // const fs = require('fs');
 // const tours = JSON.parse(fs.readFileSync(`${__dirname}/../data/tours.json`));
 
@@ -81,20 +81,41 @@ exports.createTour = async (req, res) => {
 };
 
 // UPDATE
-exports.updateTour = (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    requestedAt: req.requestTime,
-    data: {
-      tour: 'Updated tour here...',
-    },
-  });
+exports.updateTour = async (req, res) => {
+  try {
+    const tour = await Tour.findByIdAndUpdate(req.params.id, req.body, {
+      new: true, // return new updated data
+      runValidators: true,
+    });
+
+    res.status(200).json({
+      status: 'success',
+      requestedAt: req.requestTime,
+      data: {
+        tour: tour,
+      },
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: 'fail',
+      message: error,
+    });
+  }
 };
 
 // DELETE
-exports.deleteTour = (req, res) => {
-  res.status(204).json({
-    status: 'success',
-    data: null,
-  });
+exports.deleteTour = async (req, res) => {
+  try {
+    await Tour.findByIdAndDelete(req.params.id);
+
+    res.status(204).json({
+      status: 'success',
+      requestedAt: req.requestTime,
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: 'fail',
+      message: error,
+    });
+  }
 };
