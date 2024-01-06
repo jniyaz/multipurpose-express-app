@@ -49,14 +49,26 @@ exports.getTours = async (req, res) => {
       query = query.select('-__v'); // - = exclusion
     }
 
+    // 4. Pagination
+    const page = req.query.page * 1 || 1;
+    const limit = req.query.limit * 1 || 10;
+    const skip = (page - 1) * limit;
+
+    query = query.skip(skip).limit(limit);
+
+    if (req.query.page) {
+      const numOfTours = await Tour.countDocuments();
+      if (skip >= numOfTours) throw new Error('This page does not exists');
+    }
+
+    // EXECUTE QUERY
+    const tours = await query;
+
     // const query = await Tour.find()
     //   .where('duration')
     //   .equals(5)
     //   .where('difficulty')
     //   .equals('easy');
-
-    // EXECUTE QUERY
-    const tours = await query;
 
     // SEND RESPONSE
     res.status(200).json({
