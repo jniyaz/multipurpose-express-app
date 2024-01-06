@@ -1,6 +1,6 @@
 const Tour = require('../models/tourModel');
 
-// Refer - files based data
+// Refer - files based api data
 // const fs = require('fs');
 // const tours = JSON.parse(fs.readFileSync(`${__dirname}/../data/tours.json`));
 // exports.validateRequest = (req, res, next) => {
@@ -16,8 +16,32 @@ const Tour = require('../models/tourModel');
 // GET TOURS
 exports.getTours = async (req, res) => {
   try {
-    const tours = await Tour.find();
+    // const tours = await Tour.find();
 
+    // 1. handle filtering query params
+    const queryObj = { ...req.query };
+    const excludeFields = ['page', 'sort', 'limit', 'fields'];
+    excludeFields.forEach((el) => delete queryObj[el]);
+
+    // 2. handle advance filtering - with mongo operators - gte|gt|lte|lt - attach $ with operators
+    const queryStr = JSON.stringify(queryObj).replace(
+      /\b(gte|gt|lte|lt)\b/g,
+      (match) => `$${match}`,
+    );
+
+    // BUILD QUERY
+    const query = Tour.find(JSON.parse(queryStr));
+
+    // const query = await Tour.find()
+    //   .where('duration')
+    //   .equals(5)
+    //   .where('difficulty')
+    //   .equals('easy');
+
+    // EXECUTE QUERY
+    const tours = await query;
+
+    // SEND RESPONSE
     res.status(200).json({
       status: 'success',
       requestedAt: req.requestTime,
