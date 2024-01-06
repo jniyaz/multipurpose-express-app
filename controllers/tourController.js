@@ -18,19 +18,28 @@ exports.getTours = async (req, res) => {
   try {
     // const tours = await Tour.find();
 
-    // 1. handle filtering query params
+    // 1.1 handle filtering query params
     const queryObj = { ...req.query };
     const excludeFields = ['page', 'sort', 'limit', 'fields'];
     excludeFields.forEach((el) => delete queryObj[el]);
 
-    // 2. handle advance filtering - with mongo operators - gte|gt|lte|lt - attach $ with operators
+    // 1.2 handle advance filtering - gte|gt|lte|lt - attach $ on mongoose operators
     const queryStr = JSON.stringify(queryObj).replace(
       /\b(gte|gt|lte|lt)\b/g,
       (match) => `$${match}`,
     );
 
     // BUILD QUERY
-    const query = Tour.find(JSON.parse(queryStr));
+    let query = Tour.find(JSON.parse(queryStr));
+
+    // 2. Sorting
+    if (req.query.sort) {
+      // sort('price ratingsAverage') - with mongoose
+      const sortBy = req.query.sort.split(',').join(' ');
+      query = query.sort(sortBy);
+    } else {
+      query = query.sort('-createdAt');
+    }
 
     // const query = await Tour.find()
     //   .where('duration')
