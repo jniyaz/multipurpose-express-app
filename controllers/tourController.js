@@ -1,4 +1,5 @@
 const Tour = require('../models/tourModel');
+const APIFeatures = require('../utils/apiFeatures');
 
 // Refer - files based api data
 // const fs = require('fs');
@@ -24,59 +25,15 @@ exports.aliasTopTours = (req, res, next) => {
 // GET TOURS
 exports.getTours = async (req, res) => {
   try {
-    // const tours = await Tour.find();
-
-    // 1.1 handle filtering query params
-    const queryObj = { ...req.query };
-    const excludeFields = ['page', 'sort', 'limit', 'fields'];
-    excludeFields.forEach((el) => delete queryObj[el]);
-
-    // 1.2 handle advance filtering - gte|gt|lte|lt - attach $ on mongoose operators
-    const queryStr = JSON.stringify(queryObj).replace(
-      /\b(gte|gt|lte|lt)\b/g,
-      (match) => `$${match}`,
-    );
-
     // BUILD QUERY
-    let query = Tour.find(JSON.parse(queryStr));
-
-    // 2. Sorting
-    if (req.query.sort) {
-      // sort('price ratingsAverage') - with mongoose
-      const sortBy = req.query.sort.split(',').join(' ');
-      query = query.sort(sortBy);
-    } else {
-      query = query.sort('-createdAt');
-    }
-
-    // 3. Fields limiting
-    if (req.query.fields) {
-      const fields = req.query.fields.split(',').join(' ');
-      query = query.select(fields);
-    } else {
-      query = query.select('-__v'); // - = exclusion
-    }
-
-    // 4. Pagination
-    const page = req.query.page * 1 || 1;
-    const limit = req.query.limit * 1 || 10;
-    const skip = (page - 1) * limit;
-
-    query = query.skip(skip).limit(limit);
-
-    if (req.query.page) {
-      const numOfTours = await Tour.countDocuments();
-      if (skip >= numOfTours) throw new Error('This page does not exists');
-    }
+    const features = new APIFeatures(Tour, req.query)
+      .filter()
+      .sorting()
+      .fieldsLimiting()
+      .paginate();
 
     // EXECUTE QUERY
-    const tours = await query;
-
-    // const query = await Tour.find()
-    //   .where('duration')
-    //   .equals(5)
-    //   .where('difficulty')
-    //   .equals('easy');
+    const tours = await features.query;
 
     // SEND RESPONSE
     res.status(200).json({
