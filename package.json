@@ -6,7 +6,8 @@
   "scripts": {
     "dev:start": "nodemon server.js",
     "prod:start": "NODE_ENV=production nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "ndb server.js"
   },
   "keywords": [
     "express",
@@ -35,6 +36,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-react": "^7.33.2",
+    "ndb": "^1.1.5",
     "nodemon": "^3.0.2",
     "prettier": "^3.1.1"
   }

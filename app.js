@@ -14,10 +14,10 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json());
 // app.use(express.static(`${__dirname}/public`)); // no static files yet
 
-app.use((req, res, next) => {
-  console.log('Hi from middleware... 👋');
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log('Hi from middleware... 👋');
+//   next();
+// });
 
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
@@ -27,5 +27,12 @@ app.use((req, res, next) => {
 // 2. ROUTES
 app.use('/api/v1/tours', tourRoutes);
 app.use('/api/v1/users', userRoutes);
+
+app.all('*', (req, res, next) => {
+  res.status(404).json({
+    status: 'fail',
+    message: `Can't find ${req.originalUrl}`,
+  });
+});
 
 module.exports = app;
