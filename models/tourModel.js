@@ -50,6 +50,10 @@ const tourScehema = new mongoose.Schema(
     },
     images: [String],
     startDates: [Date],
+    secretTour: {
+      type: Boolean,
+      default: false,
+    },
     createdAt: {
       type: Date,
       default: Date.now(),
@@ -71,7 +75,7 @@ tourScehema.virtual('durationWeeks').get(function () {
   return this.duration / 7;
 });
 
-// DOCUMENT MIDDLEWARE: runs before .save() and .create()
+// handle DOCUMENT MIDDLEWARE: runs before .save() and .create()
 tourScehema.pre('save', function (next) {
   this.slug = slugify(this.name, { lower: true });
   next();
@@ -81,6 +85,27 @@ tourScehema.pre('save', function (next) {
 //   console.log(doc);
 //   next();
 // });
+
+// handle QUERY MIDDLEWARE:
+// tourScehema.pre('find', function (next) {
+tourScehema.pre(/^find/, function (next) {
+  this.find({ secretTour: { $ne: true } });
+  this.start = Date.now();
+  next();
+});
+
+tourScehema.post(/^find/, function (docs, next) {
+  // console.log(docs);
+  console.log(`Query took ${Date.now() - this.start} milliseconds!`);
+  next();
+});
+
+// handle AGGREGATION MIDDLEWARE:
+tourScehema.pre('aggregate', function (next) {
+  // console.log(this.pipeline());
+  this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
+  next();
+});
 
 const Tour = mongoose.model('Tour', tourScehema);
 
