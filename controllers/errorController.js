@@ -4,6 +4,6 @@ module.exports = (err, req, res, next) => {
 
   res.status(err.statusCode).json({
     status: err.status,
-    message: `Can't find ${req.originalUrl}`,
+    message: err.message,
   });
 };
