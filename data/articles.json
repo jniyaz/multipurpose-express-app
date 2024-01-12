@@ -1,0 +1,199 @@
+[
+  {
+    "wp_article_id": 1251,
+    "status": "publish",
+    "title": "Building Efficient Production-Ready Apps : Best Tech Stacks for Today&#8217;s&nbsp;Challenges",
+    "slug": "building-efficient-production-ready-apps-best-tech-stacks-for-todays-challenges",
+    "content": "<div>These are some excellent technology stacks for developing production-ready applications with a focus on performance, efficiency, and developer experience. Below, I&#8217;ve provided a brief overview of each stack and its key components:</div>\n<div></div>\n<div><strong>Stack #1: Laravel</strong></div>\n<div>Backend Framework: Laravel (PHP)</div>\n<div>Frontend Framework: Livewire (for interactive components)</div>\n<div>Database: MySQL</div>\n<div>CSS Framework: Tailwind CSS</div>\n<div></div>\n<div><strong>Stack #2: Symfony</strong></div>\n<div>Backend Framework: Symfony (PHP)</div>\n<div>Frontend Framework: Alpine.js (for interactive components)</div>\n<div>Database: PostgreSQL</div>\n<div>CSS Framework: Tailwind CSS</div>\n<div></div>\n<div><strong>Stack #3: React/Vue Full Stack</strong></div>\n<div>Frontend Framework: React or Vue.js</div>\n<div>State Management: Redux (for React) or Pinia (for Vue.js)</div>\n<div>Language: TypeScript</div>\n<div>Backend Framework: Node.js with Express</div>\n<div>Database: MongoDB</div>\n<div>CSS Framework: Tailwind CSS</div>\n<div></div>\n<div><strong>Stack #4: Django</strong></div>\n<div>Backend Framework: Django (Python)</div>\n<div>Frontend Framework: React</div>\n<div>Database: PostgreSQL</div>\n<div>CSS Framework: Tailwind CSS</div>\n<div></div>\n<div><strong>Stack #5: Ruby on Rails</strong></div>\n<div>Backend Framework: Ruby on Rails</div>\n<div>Real-time Communication: ActionCable (for WebSocket support)</div>\n<div>Database: PostgreSQL</div>\n<div>CSS Framework: Tailwind CSS</div>\n<div></div>\n<div><strong>Stack #6 (Desktop): Electron</strong></div>\n<div>Desktop Application Framework: Electron</div>\n<div>Frontend Framework: React</div>\n<div>Backend: Node.js</div>\n<div>Database: SQLite</div>\n<div></div>\n<div><strong>Stack #7 (Mobile): React Native</strong></div>\n<div>Mobile Framework: React Native</div>\n<div>State Management: Redux</div>\n<div>Backend and Database: Firebase (for real-time features and data storage)</div>\n<div></div>\n<div><strong>Stack #8 (Mobile): Flutter</strong></div>\n<div>Mobile Framework: Flutter (Dart)</div>\n<div>Backend and Database: Firebase (for real-time features and data storage)</div>\n<div></div>\n<div><strong>Tailwind CSS</strong> is a great choice for quickly building responsive and attractive user interfaces. Tailwind CSS helps streamline the UI development process, making it easier for developers to create responsive and visually appealing interfaces.</div>\n<div></div>\n<div>These stacks cover a wide range of application types, including web, desktop, and mobile. They also incorporate modern technologies and best practices for building efficient and maintainable applications.</div>\n<div></div>\n<div>Remember that the choice of stack should also consider the specific requirements and constraints of your project, such as the target audience, scalability needs, and the skills of your development team.</div>\n<div></div>\n<div>Additionally, keeping your tech stack up to date with the latest tools and libraries is important to ensure long-term maintainability and performance of your applications.</div>\n",
+    "excerpt": "<p>These are some excellent technology stacks for developing production-ready applications with a focus on performance, efficiency, and developer experience. Below, I&#8217;ve provided a brief overview of each stack and its key components: Stack #1: Laravel Backend Framework: Laravel (PHP) Frontend Framework: Livewire (for interactive components) Database: MySQL CSS Framework: Tailwind CSS Stack #2: Symfony Backend [&hellip;]</p>\n",
+    "wp_author_id": 8415137,
+    "categories": [
+      5439559,
+      2461
+    ],
+    "tags": [],
+    "link": "https://niyazjamal.wordpress.com/2023/09/28/building-efficient-production-ready-apps-best-tech-stacks-for-todays-challenges/",
+    "shortlink": "https://wp.me/pz0ND-kb",
+    "created_date": "2023-09-28T21:25:46",
+    "modified_date": "2023-10-02T06:30:56"
+  },
+  {
+    "wp_article_id": 1230,
+    "status": "publish",
+    "title": "Docker + curl: (6) Could not resolve host:&nbsp;localhost",
+    "slug": "docker-curl-6-could-not-resolve-host-localhost",
+    "content": "<p>Missing the documentation for where daemon.json is on Mac OSX.</p>\n<p>You should go to the whale in the Docker &gt; Docker Engine &gt; Preferences &gt; Daemon &gt; Advanced.<br />\nUpdate like below and restart the engine.</p>\n<blockquote><p>{<br />\n&#8220;debug&#8221;: true,<br />\n&#8220;experimental&#8221;: false,<br />\n&#8220;dns&#8221;: [&#8220;8.8.8.8&#8221;]<br />\n}</p></blockquote>\n",
+    "excerpt": "<p>Missing the documentation for where daemon.json is on Mac OSX. You should go to the whale in the Docker &gt; Docker Engine &gt; Preferences &gt; Daemon &gt; Advanced. Update like below and restart the engine. { &#8220;debug&#8221;: true, &#8220;experimental&#8221;: false, &#8220;dns&#8221;: [&#8220;8.8.8.8&#8221;] }</p>\n",
+    "wp_author_id": 8415137,
+    "categories": [
+      298
+    ],
+    "tags": [
+      4504191
+    ],
+    "link": "https://niyazjamal.wordpress.com/2022/01/28/docker-curl-6-could-not-resolve-host-localhost/",
+    "shortlink": "https://wp.me/pz0ND-jQ",
+    "created_date": "2022-01-28T16:01:44",
+    "modified_date": "2022-01-28T16:21:28"
+  },
+  {
+    "wp_article_id": 1225,
+    "status": "publish",
+    "title": "How to fix docker error loading config&nbsp;file",
+    "slug": "how-to-fix-docker-error-loading-config-file",
+    "content": "<div><strong>What are the causes for docker error loading config file?</strong></div>\n<div></div>\n<div>As we discussed earlier, the config.json file in docker stores the unencrypted credentials. Thus during docker installation, while we use docker CLI using sudo before adding the user to the docker group, we might encounter an error message, telling that ~/.docker/ directory was created with incorrect permissions:</div>\n<p>&nbsp;</p>\n<div>WARNING: Error loading config file: /home/user/.docker/config.json &#8211;</div>\n<div>stat /home/user/.docker/config.json: permission denied</div>\n<div>Let us now look at the fixes for this error message.</div>\n<p>&nbsp;</p>\n<div>How to fix docker error loading config file</div>\n<p>&nbsp;</p>\n<div>Changing the ownership and permissions using the following commands can fix the permission issue with the configuration file.</div>\n<p>&nbsp;</p>\n<div><em><strong>$ sudo chown &#8220;$USER&#8221;:&#8221;$USER&#8221; /home/&#8221;$USER&#8221;/.docker -R</strong></em></div>\n<div><em><strong>$ sudo chmod g+rwx &#8220;/home/$USER/.docker&#8221; -R</strong></em></div>\n<div></div>\n<div>Another common solution is to remove the <em><strong>~/.docker/ directory</strong></em></div>\n<div></div>\n<div>This removes the directory created with wrong permissions and will help to fix the issue. However, if we remove the directory, it re-generates automatically when we rerun Docker. Thus it removes any custom settings in the config file during the deletion of the configuration file.</div>\n<div></div>\n<div>Apart from the fixes above, adding an empty json object {} to the file can fix the error loading config file when the configuration file is empty.</div>\n<div></div>\n",
+    "excerpt": "<p>What are the causes for docker error loading config file? As we discussed earlier, the config.json file in docker stores the unencrypted credentials. Thus during docker installation, while we use docker CLI using sudo before adding the user to the docker group, we might encounter an error message, telling that ~/.docker/ directory was created with [&hellip;]</p>\n",
+    "wp_author_id": 8415137,
+    "categories": [
+      298,
+      2461
+    ],
+    "tags": [
+      4504191
+    ],
+    "link": "https://niyazjamal.wordpress.com/2022/01/28/how-to-fix-docker-error-loading-config-file/",
+    "shortlink": "https://wp.me/pz0ND-jL",
+    "created_date": "2022-01-28T14:57:37",
+    "modified_date": "2022-01-28T15:04:35"
+  },
+  {
+    "wp_article_id": 1175,
+    "status": "publish",
+    "title": "How to install and configure JWT (Json Web Token) in Laravel&nbsp;Applications",
+    "slug": "how-to-install-and-configure-jwt-json-web-token-in-laravel-applications",
+    "content": "\r\n<p><strong>JWT installation &amp; Settings</strong></p>\r\n\r\n\r\n\r\n<p>Before we get into this JSON Web Token tutorial, what exactly is a JWT?<br />In modern web trends, Popularity of single page applications, mobile applications, and RESTful API services, We are no longer spending much time building markup, instead we are building APIs that our front-end applications consume.<br />Back-end is more about business logic and data, while presentation logic is moved exclusively to the front-end or mobile applications. These changes have led to new ways of implementing authentication in modern applications.</p>\r\n\r\n\r\n\r\n<p><strong>What is a JSON Web Token?</strong></p>\r\n\r\n\r\n\r\n<p>A JSON Web Token is used to send information that can be verified and trusted by means of a digital signature. It comprises a compact and URL-safe JSON object, which is cryptographically signed to verify its authenticity, and which can also be encrypted if the payload contains sensitive information.<br />Because of its compact structure, JWT is usually used in HTTP Authorization headers or URL query parameters.</p>\r\n\r\n\r\n\r\n<p><strong>How to use JWT authentication approach in Laravel applications?</strong><!--more--></p>\r\n\r\n\r\n\r\n<p>JWT (Json Web token) to make token based authentication system in Laravel. if we implement everything of jwt authentication system, it’s hard and takes long time. so we decided to use “tymon/jwt-auth” package to integarte quickly to develop jwt authentication system.</p>\r\n\r\n\r\n\r\n<p>tymon/jwt-auth: <a href=\"https://github.com/tymondesigns/jwt-auth\">https://github.com/tymondesigns/jwt-auth</a><br />tymon/jwt-auth document: <a href=\"https://jwt-auth.readthedocs.io/en/develop/\">https://jwt-auth.readthedocs.io/en/develop/</a></p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>composer require tymon/jwt-auth</code></pre>\r\n\r\n\r\n\r\n<p><a href=\"https://jwt-auth.readthedocs.io/en/develop/laravel-installation/\" rel=\"nofollow\">https://jwt-auth.readthedocs.io/en/develop/laravel-installation/</a></p>\r\n\r\n\r\n\r\n<p><strong>Publish the config</strong></p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>php artisan vendor:publish --provider=\"Tymon\\JWTAuth\\Providers\\LaravelServiceProvider\"</code></pre>\r\n\r\n\r\n\r\n<p>You should now have a config/jwt.php file that allows you to configure the basics of this package.</p>\r\n\r\n\r\n\r\n<p>&nbsp;</p>\r\n\r\n\r\n\r\n<p><strong>Generate secret key</strong></p>\r\n\r\n\r\n\r\n<p>I have included a helper command to generate a key for you:</p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>php artisan jwt:secret\r\n</code></pre>\r\n\r\n\r\n\r\n<p><strong>Update your User model</strong></p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>&lt;?php\r\n\r\nnamespace App;\r\n\r\nuse Tymon\\JWTAuth\\Contracts\\JWTSubject;\r\nuse Illuminate\\Notifications\\Notifiable;\r\nuse Illuminate\\Foundation\\Auth\\User as Authenticatable;\r\n\r\nclass User extends Authenticatable implements JWTSubject\r\n{\r\n    use Notifiable;\r\n\r\n    // Rest omitted for brevity\r\n\r\n    /**\r\n     * Get the identifier that will be stored in the subject claim of the JWT.\r\n     *\r\n     * @return mixed\r\n     */\r\n    public function getJWTIdentifier()\r\n    {\r\n        return $this-&gt;getKey();\r\n    }\r\n\r\n    /**\r\n     * Return a key value array, containing any custom claims to be added to the JWT.\r\n     *\r\n     * @return array\r\n     */\r\n    public function getJWTCustomClaims()\r\n    {\r\n        return [];\r\n    }\r\n}</code></pre>\r\n\r\n\r\n\r\n<p><strong>Configure Auth guard</strong><br />inside the config/auth.php file, update the following details</p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>'defaults' =&gt; [\r\n    'guard' =&gt; 'api',\r\n    'passwords' =&gt; 'users',\r\n],\r\n\r\n...\r\n\r\n'guards' =&gt; [\r\n    'api' =&gt; [\r\n        'driver' =&gt; 'jwt',\r\n        'provider' =&gt; 'users',\r\n    ],\r\n],\r\n</code></pre>\r\n\r\n\r\n\r\n<p><strong>Add authentication routes</strong></p>\r\n\r\n\r\n\r\n<p>First let&#8217;s add some routes in routes/api.php as follows:</p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>// Jwt Authentication\r\nRoute::post('register', [JwtAuthController::class, 'register'])-&gt;name('api.jwt.register');\r\nRoute::post('login', [JwtAuthController::class, 'login'])-&gt;name('api.jwt.login');\r\n\r\nRoute::group(['middleware' =&gt; 'auth:api'], function(){\r\n    Route::get('user', [JwtAuthController::class, 'me'])-&gt;name('api.jwt.user');\r\n    Route::get('refresh', [JwtAuthController::class, 'refresh'])-&gt;name('api.jwt.refresh');\r\n    Route::get('logout', [JwtAuthController::class, 'logout'])-&gt;name('api.jwt.logout');\r\n});\r\n</code></pre>\r\n\r\n\r\n\r\n<p>Create the JwtAuthController:</p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>php artisan make:controller JwtAuthController\r\n</code></pre>\r\n\r\n\r\n\r\n<p>Then add the following:</p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>\r\n\r\nnamespace App\\Http\\Controllers\\Auth;\r\n\r\nuse App\\Models\\User;\r\nuse Illuminate\\Http\\Request;\r\nuse App\\Http\\Controllers\\Controller;\r\nuse Illuminate\\Support\\Facades\\Auth;\r\n\r\nclass JwtAuthController extends Controller\r\n{\r\n    /**\r\n     * Create a new AuthController instance.\r\n     *\r\n     * @return void\r\n     */\r\n    public function __construct()\r\n    {\r\n        $this-&gt;middleware('auth:api', ['except' =&gt; ['login', 'register']]);\r\n    }\r\n\r\n    public function register(Request $request)\r\n    {\r\n        $validated = $request-&gt;validate([\r\n            'name' =&gt; 'required|string|max:100',\r\n            'email' =&gt; 'required|email|max:255|unique:users',\r\n            'password' =&gt; 'required|string|min:8|max:255|confirmed',\r\n            'password_confirmation' =&gt; 'required|string|min:8|max:255',\r\n        ]);\r\n\r\n        $user = new User;\r\n        $user-&gt;fill($request-&gt;all());\r\n        $user-&gt;password = bcrypt($request-&gt;password);\r\n        $user-&gt;save();\r\n\r\n        return response()-&gt;json([\r\n            'status' =&gt; 'success',\r\n            'data' =&gt; $user\r\n        ], 200);\r\n    }\r\n\r\n    /**\r\n     * Get a JWT via given credentials.\r\n     *\r\n     * @return \\Illuminate\\Http\\JsonResponse\r\n     */\r\n    public function login()\r\n    {\r\n        $credentials = request(['email', 'password']);\r\n\r\n        if (!$token = Auth::attempt($credentials)) {\r\n            return response()-&gt;json(['error' =&gt; 'Unauthorized'], 401);\r\n        }\r\n\r\n        return $this-&gt;respondWithToken($token);\r\n    }\r\n\r\n    /**\r\n     * Get the authenticated User.\r\n     *\r\n     * @return \\Illuminate\\Http\\JsonResponse\r\n     */\r\n    public function me()\r\n    {\r\n        return response()-&gt;json(Auth::user());\r\n    }\r\n\r\n    /**\r\n     * Log the user out (Invalidate the token).\r\n     *\r\n     * @return \\Illuminate\\Http\\JsonResponse\r\n     */\r\n    public function logout()\r\n    {\r\n        Auth::logout();\r\n\r\n        return response()-&gt;json(['message' =&gt; 'Successfully logged out']);\r\n    }\r\n\r\n    /**\r\n     * Refresh a token.\r\n     *\r\n     * @return \\Illuminate\\Http\\JsonResponse\r\n     */\r\n    public function refresh()\r\n    {\r\n        return $this-&gt;respondWithToken(Auth::refresh());\r\n    }\r\n\r\n    /**\r\n     * Get the token array structure.\r\n     *\r\n     * @param  string $token\r\n     *\r\n     * @return \\Illuminate\\Http\\JsonResponse\r\n     */\r\n    protected function respondWithToken($token)\r\n    {\r\n        return response()-&gt;json([\r\n            'access_token' =&gt; $token,\r\n            'token_type' =&gt; 'bearer',\r\n            'expires_in' =&gt; Auth::factory()-&gt;getTTL() * 60\r\n        ]);\r\n    }\r\n}</code></pre>\r\n\r\n\r\n\r\n<p>You should now be able to POST to the login endpoint (e.g. <a href=\"http://example.dev/auth/login\" rel=\"nofollow\">http://example.dev/auth/login</a>) with some valid credentials and see a response like:</p>\r\n\r\n\r\n\r\n<p>&nbsp;</p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>{\r\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ\",\r\n    \"token_type\": \"bearer\",\r\n    \"expires_in\": 3600\r\n}</code></pre>\r\n\r\n\r\n\r\n<p>This token can then be used to make authenticated requests to your application.</p>\r\n",
+    "excerpt": "<p>JWT installation &amp; Settings Before we get into this JSON Web Token tutorial, what exactly is a JWT?In modern web trends, Popularity of single page applications, mobile applications, and RESTful API services, We are no longer spending much time building markup, instead we are building APIs that our front-end applications consume.Back-end is more about business [&hellip;]</p>\n",
+    "wp_author_id": 8415137,
+    "categories": [
+      86504237
+    ],
+    "tags": [
+      719861641,
+      96192961
+    ],
+    "link": "https://niyazjamal.wordpress.com/2021/06/12/how-to-install-and-configure-jwt-json-web-token-in-laravel-applications/",
+    "shortlink": "https://wp.me/pz0ND-iX",
+    "created_date": "2021-06-12T23:12:21",
+    "modified_date": "2021-06-15T09:44:00"
+  },
+  {
+    "wp_article_id": 1138,
+    "status": "publish",
+    "title": "Alpine.js v3",
+    "slug": "alpine-js-v3",
+    "content": "\r\n<p>Alpine.js version 3.0 will be released soon!</p>\r\n\r\n\r\n\r\n<p>There is going to be an <a class=\"text-green-800 font-semibold\" href=\"https://alpineday.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Alpine Day</a> online event where the creator, <a class=\"text-green-800\" href=\"https://twitter.com/calebporzio\" target=\"_blank\" rel=\"noreferrer noopener\">Caleb Porzio</a>, will be talking about some new things coming to Alpine as well as pushing the new version live!</p>\r\n\r\n\r\n\r\n<p>In this quick post, let us go through some of the new features and how you can stay up-to-date about the latest version and the new release.</p>\r\n\r\n\r\n\r\n<p>you can signup for Alpine Day event, you will get an email with a few things coming out in v3.</p>\r\n\r\n\r\n\r\n<p>&nbsp;</p>\r\n\r\n\r\n\r\n<p><strong>Global Alpine Components</strong></p>\r\n\r\n\r\n\r\n<p>Have you ever created an Alpine component, and you re-used the functionality inside of the x-data attribute?<br />If so, you would need to include a globally accessible function like so:</p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>&lt;div x-data=\"alpineDropdown()\"&gt;\r\n...\r\n&lt;/div&gt;\r\n\r\n&lt;script&gt;\r\n    window.function = alpineDropdown(){\r\n        ...\r\n    }\r\n&lt;/script&gt;</code></pre>\r\n\r\n\r\n\r\n<p>With Global Alpine Components, you can use Alpine.component() to encapsulate this functionality.</p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>&lt;div x-data=\"dropdown\"&gt;....&lt;/div&gt;\r\n\r\n&lt;script&gt;\r\n    Alpine.component('dropdown', () =&gt; ({\r\n        open: false,\r\n        toggle() { this.open = !this.open }\r\n    }))\r\n&lt;/script&gt;</code></pre>\r\n\r\n\r\n\r\n<p><!--more--></p>\r\n\r\n\r\n\r\n<p><strong>Nested Components</strong></p>\r\n\r\n\r\n\r\n<p>Currently, in Alpine v2, if you nested a component inside another component, would not be able to access the parent component easily. Now, in version 3 it&#8217;s going to be available.</p>\r\n\r\n\r\n\r\n<p>&nbsp;</p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>&lt;div x-data=\"{ firstName: \"John\" }\"&gt;\r\n    &lt;div x-data=\"{ lastName: \"Doe\" }\"&gt;\r\n        &lt;span x-text=\"firstName + ' ' + lastName\"&gt;&lt;/span&gt;\r\n    &lt;/div&gt;\r\n&lt;/div&gt;</code></pre>\r\n\r\n\r\n\r\n<p>Nested components are going to make communicating between components</p>\r\n\r\n\r\n\r\n<p>&nbsp;</p>\r\n\r\n\r\n\r\n<p><strong>x-init And $el:</strong></p>\r\n\r\n\r\n\r\n<p>In the current version of AlpineJS, the x-init could only be added to the parent element, but now you can add that to any element inside the component.</p>\r\n\r\n\r\n\r\n<pre class=\"wp-block-code\"><code>&lt;div x-data=\"{ name: \"John Doe\" }\"&gt;\r\n    &lt;span x-init=\"name = $el.textContent\"&gt;Jane Doe&lt;/span&gt;\r\n&lt;/div&gt;</code></pre>\r\n\r\n\r\n\r\n<p>Also, the $el magic property used to only return the component&#8217;s root element; however, now it will return the node element it is referenced on.</p>\r\n\r\n\r\n\r\n<p>And more to come from the creator of Alpine on Alpine Day.</p>\r\n\r\n\r\n\r\n<p>Alpine is the best companion for Livewire, so if you are in the Laravel space and want to learn about some of the new features coming to Alpine, be sure to signup for this event.</p>\r\n\r\n\r\n\r\n<p>Happy coding ✌️</p>\r\n\r\n\r\n\r\n<p>Thanks : devdojo</p>\r\n",
+    "excerpt": "<p>Alpine.js version 3.0 will be released soon! There is going to be an Alpine Day online event where the creator, Caleb Porzio, will be talking about some new things coming to Alpine as well as pushing the new version live! In this quick post, let us go through some of the new features and how [&hellip;]</p>\n",
+    "wp_author_id": 8415137,
+    "categories": [
+      457
+    ],
+    "tags": [],
+    "link": "https://niyazjamal.wordpress.com/2021/06/03/alpine-js-v3/",
+    "shortlink": "https://wp.me/pz0ND-im",
+    "created_date": "2021-06-03T12:18:06",
+    "modified_date": "2021-06-04T11:37:36"
+  },
+  {
+    "wp_article_id": 1115,
+    "status": "publish",
+    "title": "How to install Laravel &amp; using Laravel&nbsp;Valet?",
+    "slug": "how-to-install-laravel-using-laravel-valet",
+    "content": "\n<p>Here in the video for the demonstration using #Laravel 8x in #Tamil.</p>\n\n\n\n<figure class=\"wp-block-embed is-type-rich is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio\"><div class=\"wp-block-embed__wrapper\">\n<span class=\"embed-youtube\" style=\"text-align:center; display: block;\"><iframe class=\"youtube-player\" width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/qC6WGMt6bp0?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en&#038;autohide=2&#038;wmode=transparent\" allowfullscreen=\"true\" style=\"border:0;\" sandbox=\"allow-scripts allow-same-origin allow-popups allow-presentation allow-popups-to-escape-sandbox\"></iframe></span>\n</div></figure>\n\n\n\n<p></p>\n",
+    "excerpt": "<p>Here in the video for the demonstration using #Laravel 8x in #Tamil.</p>\n",
+    "wp_author_id": 8415137,
+    "categories": [
+      5439559
+    ],
+    "tags": [],
+    "link": "https://niyazjamal.wordpress.com/2021/04/04/how-to-install-laravel-using-laravel-valet/",
+    "shortlink": "https://wp.me/pz0ND-hZ",
+    "created_date": "2021-04-04T12:27:03",
+    "modified_date": "2021-04-04T12:27:14"
+  },
+  {
+    "wp_article_id": 1108,
+    "status": "publish",
+    "title": "How to install Composer Globally in Mac&nbsp;OS",
+    "slug": "how-to-install-composer-globally-in-mac-os",
+    "content": "<p> </p>\n<p>Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project.</p>\n<p>Installing Composer On Mac Globally</p>\n<p><span style=\"text-decoration:underline;\"><em>Step1:</em></span><br />Open a new Terminal command line and execute the following command to download the composer.phar file.</p>\n<blockquote>\n<p>curl -sS <a href=\"https://getcomposer.org/installer\" rel=\"nofollow\">https://getcomposer.org/installer</a> | php</p>\n</blockquote>\n<p><span style=\"text-decoration:underline;\"><em>Step2:</em></span><br />Run the following two commands in sequential order.</p>\n<blockquote>\n<p>mv composer.phar /usr/local/bin/composer</p>\n<p>chmod +x /usr/local/bin/composer</p>\n</blockquote>\n<p>And that is it, the global install is complete in Mac.</p>\n<p>Official Website &#8211; <a href=\"https://getcomposer.org/\" rel=\"nofollow\">https://getcomposer.org/</a></p>\n\n\n<p></p>\n",
+    "excerpt": "<p>  Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project. Installing Composer On Mac Globally Step1:Open a new Terminal command line and execute the following command to download the composer.phar file. curl -sS <a href=\"https://getcomposer.org/installer\" rel=\"nofollow\">https://getcomposer.org/installer</a> | php Step2:Run the following two commands in sequential order. mv composer.phar [&hellip;]</p>\n",
+    "wp_author_id": 8415137,
+    "categories": [
+      5439559
+    ],
+    "tags": [
+      28781,
+      458
+    ],
+    "link": "https://niyazjamal.wordpress.com/2021/03/28/how-to-install-composer-globally-in-mac-os/",
+    "shortlink": "https://wp.me/pz0ND-hS",
+    "created_date": "2021-03-28T11:03:52",
+    "modified_date": "2021-03-28T11:03:52"
+  },
+  {
+    "wp_article_id": 1098,
+    "status": "publish",
+    "title": "Alpine.js, a tiny JavaScript&nbsp;framework",
+    "slug": "alpine-js-a-tiny-javascript-framework",
+    "content": "<p>Today i&#8217;m writing about the new minimal js library Alpine.js, A rugged, minimal framework for composing JavaScript behaviours in the Html markup.</p>\n<p>Think of it like Tailwind for JavaScript. Alpine.js is a tiny JavaScript framework that makes declarative rendering super easy, without the weight of larger frameworks like Vue or React.</p>\n<p>If you&#8217;re looking for a full featured javascript framework with routing, state management, and a bit more complexity. Then, Vue or React may be a better fit.</p>\n<p>Instead, if you&#8217;re looking to a little javascript, add two-way data binding, and create simple components in your web pages.<br />\nThen, AlpineJS is the library you will want to reach for, which fits simple and better way of handling js in modern way.<br />\nIt puts simplicty back into javascript.</p>\n<p>Creator Caleb Porzio (Creator of Alpine.js, Laravel Livewire) has kept much of the syntax is like Vue.js,</p>\n<p>Probably the most attractive things about Alpine for me is its syntax, if you already know Vue, you basically know Alpine,</p>\n<p>Alpine is designed to be used with a CDN script, rather than any complex Webpack setup, so all we need is a single HTML file with the script pulled in in the head.</p>\n<p><em>Check the Alpine GitHub page for the latest version CDN script.</em></p>\n<p><code><a href=\"https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js\">https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js</a></code></p>\n<p><em>&#8220;You may also wish to include Alpine via NPM, which you can learn how to do from the Alpine Github repo.&#8221;</em></p>\n<p><strong><em>Creating some example components,</em></strong></p>\n<p>Creating the first Alpine component is super simple. All need to do is add the x-data attribute to any element like so:</p>\n<p>&lt;div x-data=&#8221;{}&#8221;&gt;&lt;/div&gt;</p>\n<p><strong><em>Example 1:</em></strong></p>\n<p>The example will create a new Alpine component with an empty object {} as its data. let&#8217;s create a new one with some data into it.</p>\n<p><code>&lt;div x-data=\"{ title: 'Hello World' }\"&gt;<br />\n&lt;p x-text=\"title\"&gt;&lt;/p&gt;<br />\n&lt;button @click=\"title='Alpine rocks'\"&gt;Click to change&lt;/button&gt;<br />\n&lt;/div&gt;</code></p>\n<p><strong><em>Example 2 | x-on:click</em></strong></p>\n<p><code>&lt;div x-data=\"{ count: 1 }\"&gt;<br />\n&lt;p x-text=\"count\"&gt;&lt;/p&gt;<br />\n&lt;button @click=\"count++\"&gt;Count Up&lt;/button&gt;<br />\n&lt;button @click=\"count--\"&gt;Count Down&lt;/button&gt;<br />\n&lt;button @click=\"count=0\"&gt;Reset&lt;/button&gt;<br />\n&lt;/div&gt;</code></p>\n<p><!--more--></p>\n<p><em><strong>Example 3 | x-init</strong></em></p>\n<p><code>&lt;div x-data=\"{ countdown: 60 }\"<br />\nx-init=\"setInterval(function(){<br />\ncountdown--;<br />\n}, 1000);<br />\n\"&gt;<br />\n&lt;h1 x-text=\"countdown\"&gt;&lt;/h1&gt;<br />\n&lt;/div&gt;</code></p>\n<p><em><strong>Example 4 | x-show</strong></em></p>\n<p><code>&lt;div x-data=\"{ show: false }\"&gt;<br />\n&lt;button @click=\"show=!show\"&gt;Toggle me&lt;/button&gt;<br />\n&lt;br&gt;&lt;br&gt;<br />\n&lt;div x-show=\"show\"&gt;Hello!!&lt;/div&gt;<br />\n&lt;div x-show.transition=\"show\"&gt;Hello!!&lt;/div&gt;<br />\n&lt;/div&gt;</code></p>\n<p><em><strong>Example 5 | x-model | 2-way data binding</strong></em></p>\n<p><code>&lt;div x-data=\"{ title: 'AlpineJs is awesome' }\"&gt;<br />\n&lt;p x-text=\"title\"&gt;&lt;/p&gt;<br />\n&lt;input type=\"text\" x-model=\"title\" /&gt;<br />\n&lt;/div&gt;</code></p>\n<p><em><strong>Example 5 | x-html</strong></em></p>\n<p><code>&lt;div x-data=\"{ code: '&lt;p&gt;Dynamic values&lt;/p&gt;' }\"&gt;<br />\n&lt;div x-html=\"code\"&gt;&lt;/div&gt;<br />\n&lt;/div&gt;</code></p>\n<p><em><strong>Example 6 | x-ref</strong></em></p>\n<p>&lt;div x-data=&#8221;{ code: &#8216;&lt;p&gt;Dynamic paragraph&lt;/p&gt;&#8217; }&#8221;&gt;<br />\n&lt;div x-ref=&#8221;sentence&#8221;&gt;I am a sentence&lt;/div&gt;<br />\n&lt;button @click=&#8221;$refs.sentence.innerText=&#8217;I just changed'&#8221;&gt;Change Sentence&lt;/button&gt;<br />\n&lt;/div&gt;</p>\n<p><em><strong>Example 7 | x-if</strong></em></p>\n<p><code>&lt;div x-data=\"{ age: 29 }\"&gt;<br />\n&lt;template x-if=\"age &gt; 30\"&gt;<br />\n&lt;p&gt;I am 30+ years old.&lt;/p&gt;<br />\n&lt;/template&gt;<br />\n&lt;template x-if=\"age &lt; 30\"&gt;<br />\n&lt;p&gt;I am less than 30.&lt;/p&gt;<br />\n&lt;/template&gt;<br />\n&lt;button @click=\"age=32\"&gt;Change Age&lt;/button&gt;<br />\n&lt;/div&gt;</code></p>\n<p><em><strong>Example 8 | x-for</strong></em></p>\n<p><code>&lt;div x-data=\"{ groceries: ['milk', 'eggs', 'cheese'] }\"&gt;<br />\n&lt;p&gt;Groceries&lt;/p&gt;<br />\n&lt;ul&gt;<br />\n&lt;template x-for=\"item in groceries\"&gt;<br />\n&lt;li x-text=\"item\"&gt;&lt;/li&gt;<br />\n&lt;/template&gt;<br />\n&lt;/ul&gt;<br />\n&lt;/div&gt;</code></p>\n<p>There are 14 directives available to you: visit the following link</p>\n<p><a href=\"https://github.com/alpinejs/alpine#learn\" rel=\"nofollow\">https://github.com/alpinejs/alpine#learn</a></p>\n<p>Note:<br />\nWondering why Alpine uses x- instead of a-, before deciding on a name, Alpine was known as “project-x”, a nod to it’s past.</p>\n",
+    "excerpt": "<p>Today i&#8217;m writing about the new minimal js library Alpine.js, A rugged, minimal framework for composing JavaScript behaviours in the Html markup. Think of it like Tailwind for JavaScript. Alpine.js is a tiny JavaScript framework that makes declarative rendering super easy, without the weight of larger frameworks like Vue or React. If you&#8217;re looking for [&hellip;]</p>\n",
+    "wp_author_id": 8415137,
+    "categories": [
+      457
+    ],
+    "tags": [
+      703946765,
+      457
+    ],
+    "link": "https://niyazjamal.wordpress.com/2021/03/11/alpine-js-a-tiny-javascript-framework/",
+    "shortlink": "https://wp.me/pz0ND-hI",
+    "created_date": "2021-03-11T12:18:46",
+    "modified_date": "2021-06-04T11:36:15"
+  },
+  {
+    "wp_article_id": 1065,
+    "status": "publish",
+    "title": "Useful Laravel Snippets",
+    "slug": "useful-laravel-snippets-for-quick-performance-delivers",
+    "content": "\n<p><strong>How to check current installed version of Laravel ?&nbsp;</strong></p>\n\n\n\n<pre class=\"wp-block-code\"><code>php artisan --version</code></pre>\n\n\n\n<p></p>\n\n\n\n<p><strong>Last executed queries in Laravel 5</strong></p>\n\n\n\n<pre class=\"wp-block-code\"><code>DB::getQueryLog();</code></pre>\n\n\n\n<p></p>\n\n\n\n<p><strong>Getting all tables inside a database using Laravel&nbsp;</strong></p>\n\n\n\n<pre class=\"wp-block-code\"><code>$tables = DB::select('SHOW TABLES');\n\ndd($tables);</code></pre>\n\n\n\n<p>Injecting data With Blade</p>\n\n\n\n<pre class=\"wp-block-code\"><code>// categoriesCount.blade.php\n@inject('categories','App\\categories')\nTotal categories : {{ $categories-&amp;gt;count(); }}\n\n(or)\n\n// routes.php\nview::composer('categories',function($view) {\n$view-&amp;gt;with('categories','App\\categories');\n});\n\n// categoriesCount.blade.php\nTotal categories : {{ $categories-&amp;gt;count(); }}</code></pre>\n\n\n\n<p>**********</p>\n\n\n\n<p></p>\n\n\n\n<p><strong>Named Route Groups</strong></p>\n\n\n\n<pre class=\"wp-block-code\"><code>Route::get('admin/home',&#091;'as' =&gt; 'home',function(){\n    echo 'admin home';\n}]);</code></pre>\n\n\n\n<p>// view&nbsp;</p>\n\n\n\n<pre class=\"wp-block-code\"><code>echo route('home'); // output : http://localhost/admin/home\nRoute::group(&#091;'prefix' =&gt; 'admin'],function(){\n    Route::get('home',&#091;'as' =&gt; 'home',function(){\n        echo 'admin home';\n    }]);\n});</code></pre>\n\n\n\n<p>// view&nbsp;</p>\n\n\n\n<pre class=\"wp-block-code\"><code>echo route('admin.home'); // output : http://localhost/admin/home</code></pre>\n\n\n\n<p>***************</p>\n\n\n\n<p><strong>Get table column names as array from Eloquent model&nbsp;</strong></p>\n\n\n\n<pre class=\"wp-block-code\"><code>class NewMediaModel extends Model {\n    public function getTableColumns() {\n        return $this-&gt;getConnection()-&gt;getSchemaBuilder()-&gt;getColumnListing($this-&gt;getTable());\n    }\n}</code></pre>\n\n\n\n<p>**************</p>\n\n\n\n<p><strong>Show All Validation Errors in Laravel’s Blade View&nbsp;&nbsp;</strong></p>\n\n\n\n<pre class=\"wp-block-code\"><code>@if($errors-&gt;has())\n    @foreach ($errors-&gt;all() as $error)\n        &lt;div&gt;{{ $error }}&lt;/div&gt;\n    @endforeach\n@endif</code></pre>\n",
+    "excerpt": "<p>How to check current installed version of Laravel ?&nbsp; Last executed queries in Laravel 5 Getting all tables inside a database using Laravel&nbsp; Injecting data With Blade ********** Named Route Groups // view&nbsp; // view&nbsp; *************** Get table column names as array from Eloquent model&nbsp; ************** Show All Validation Errors in Laravel’s Blade View&nbsp;&nbsp;</p>\n",
+    "wp_author_id": 8415137,
+    "categories": [
+      86504237,
+      321
+    ],
+    "tags": [
+      96192961
+    ],
+    "link": "https://niyazjamal.wordpress.com/2021/01/09/useful-laravel-snippets-for-quick-performance-delivers/",
+    "shortlink": "https://wp.me/pz0ND-hb",
+    "created_date": "2021-01-09T10:32:56",
+    "modified_date": "2021-06-03T22:10:53"
+  },
+  {
+    "wp_article_id": 1039,
+    "status": "publish",
+    "title": "Building web with React, Next.js, Tailwind,&nbsp;Vercel",
+    "slug": "building-web-with-react-js-next-js-tailwindcss-github-pages-vercel",
+    "content": "<p>Recently I have updated my personal website blog from wordpress to next.js.</p>\n<p>Next.js plays as a frontend as wordpress uses as a backend service.</p>\n<p>The site is built with React, Next.js and Tailwind css, and it&#8217;s hosted on Vercel.</p>\n<p>The site is hosted in vercel. Please visit the following links for more details.</p>\n<p><code>http://niyaz.vercel.app</code></p>\n",
+    "excerpt": "<p>Recently I have updated my personal website blog from wordpress to next.js. Next.js plays as a frontend as wordpress uses as a backend service. The site is built with React, Next.js and Tailwind css, and it&#8217;s hosted on Vercel. The site is hosted in vercel. Please visit the following links for more details. <a href=\"http://niyaz.vercel.app\" rel=\"nofollow\">http://niyaz.vercel.app</a></p>\n",
+    "wp_author_id": 8415137,
+    "categories": [
+      647,
+      457,
+      205748572,
+      1131548
+    ],
+    "tags": [
+      705276552,
+      609354954,
+      705276554,
+      235006381,
+      33
+    ],
+    "link": "https://niyazjamal.wordpress.com/2020/09/20/building-web-with-react-js-next-js-tailwindcss-github-pages-vercel/",
+    "shortlink": "https://wp.me/pz0ND-gL",
+    "created_date": "2020-09-20T18:16:34",
+    "modified_date": "2021-06-04T11:46:02"
+  }
+]
