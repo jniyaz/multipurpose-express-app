@@ -1,7 +1,48 @@
 const fs = require('fs');
+const Article = require('../models/articleModel');
+
+// GET ARTICLES
+exports.getArticles = async (req, res, next) => {
+  try {
+    const articles = await Article.find();
+    res.status(200).json({
+      status: 'success',
+      data: articles,
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      error: error,
+    });
+  }
+};
+
+// GET ARTICLE
+exports.getArticle = async (req, res, next) => {
+  try {
+    const article = await Article.findById(req.params.id);
+
+    if (!article) {
+      return res.status(404).json({
+        status: 'error',
+        message: 'No article found',
+      });
+    }
+
+    res.status(200).json({
+      status: 'success',
+      data: article,
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      message: error,
+    });
+  }
+};
 
 // fetch wp articles and write to article json file
-exports.getWpArticles = async (req, res, next) => {
+exports.fetchWpArticles = async (req, res, next) => {
   try {
     console.log(`${process.env.WP_API_BASE}/posts`);
     const response = await fetch(`${process.env.WP_API_BASE}/posts`);
