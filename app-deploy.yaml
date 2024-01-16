@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multipurpose-express-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: multipurpose-express-app
+  template:
+    metadata:
+      labels:
+        app: multipurpose-express-app
+    spec:
+      containers:
+        - name: multipurpose-express-app
+          image: multipurpose-express-app
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 3000
